@@ -1,0 +1,52 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		link(href="/index/signin.css",type="text/css",rel="stylesheet")
+		link(href="/libs/bootstrap/dist/css/bootstrap.min.css",rel="stylesheet")
+		link(href="/lake.css" type="text/css" rel="stylesheet")
+		link(href="/index/index.css" type="text/css" rel="stylesheet")
+		link(href="/index/css/userCenter.css" type="text/css" rel="stylesheet")
+		
+		script(src="/libs/jquery/dist/jquery.min.js")
+		script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
+		script(src="/index/js/uploadImg.js")
+		script(src="/index/js/userCenter.js")
+	body
+		div.desk
+			div.deskUserName 用户名：#{user.name}
+			div#deskUserOld.deskUserOld 年龄：#{user.old}
+			div#deskUserEmail.deskUserEmail 邮箱：#{user.email}
+			div#deskUserNickName.deskUserNickName 昵称：#{user.nickName}
+			div#deskUserUnique.deskUserUnique 个性签名：#{user.uniqueSign}
+			div.deskUserPic(id="pic")
+				img.img-circle(src='#{user.sculpture}',width="200px",height="200px")
+			a(href="#",id="set") 设置所有
+			a(href="#",id="setPhoto",data-toggle="modal",data-target="#setPhotoLog") 修改头像
+			div.deskUserPicMask(id="mask")
+			div.deskUserTime 注册时间：#{moment(user.meta.createAt).format('MM/DD/YYYY')}
+			form(method="POST",action="/user/setInfo")
+				div#deskUserNickNameSet.deskUserNickNameSet
+					p 昵称：
+						input(name="user[nickName]",type="text",value="#{user.nickName}")
+				div#deskUserOldSet.deskUserOldSet
+					p 年龄：
+						input(name="user[old]",type="number",min="1",max="150",step="1",value="#{user.old}")
+				div#deskUserEmailSet.deskUserEmailSet
+					p 邮箱：
+						input(name="user[email]",type="email",value="#{user.email}")
+				div#deskUserUniqueSet.deskUserUniqueSet
+					p 个性签名：
+						input(name="user[uniqueSign]",type="text",value="#{user.uniqueSign}")
+				div#deskUserSave.deskUserSave
+					button(type="submit") 保存
+		#setPhotoLog.modal.fade(role="dialog",aria-labelledby="myModalLabel")
+			.modal-dialog
+				.modal-content
+					.modal-header 修改头像
+					.modal-body
+						input(type="file",id="file1",name="file1")
+					.modal-footer
+						button(id="upload",name="upload",data-dismiss="modal") 上传
+

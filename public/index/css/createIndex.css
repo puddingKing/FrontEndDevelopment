@@ -1,0 +1,464 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Microsoft Yahei';
+}
+#data{
+	display: none;
+}
+#saveLayoutSuccess{
+	position: absolute;
+	left: 20px;
+	bottom: 80px;
+	width: 180px;
+	height: 35px;
+	background: #6CA6CD;
+	padding: 5px 20px;
+	transition:all 1s;
+	display: none;
+}
+#saveLayoutSuccess i{		
+	font-size: 16px;
+}
+#saveLayoutSuccess p{
+	position: absolute;
+	left: 40px;
+	top: 5px;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+	color: white;
+}
+#updateLayoutSuccess{
+	position: absolute;
+	left: 20px;
+	bottom: 80px;
+	width: 180px;
+	height: 35px;
+	background: #6CA6CD;
+	padding: 5px 20px;
+	transition:all 1s;
+	display: none;
+}
+#updateLayoutSuccess i{
+	font-size: 16px;
+}
+#updateLayoutSuccess p{
+	position: absolute;
+	left: 40px;
+	top: 5px;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+	color: white;
+}
+#save{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	width: 90px;
+	height: 40px;
+	display: none;
+}
+#save i{
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	font-size: 15px;
+	color: white;
+}
+#save p{
+	position: absolute;
+	font-family: "Microsoft Yahei";
+	top: 10px;
+	left: 35px;
+}
+.editInput{
+	height: 50px;
+	width: 65px;
+	padding-left: 5px;
+	color: black;
+}
+.yInput{
+	width: 80px;
+}
+#tool{
+	position: fixed;
+	width: 16%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #3f4652;
+	text-align: center;
+}
+#navTool{
+	position: fixed;
+	width: 16%;
+	height: 100%;
+	display: block;
+	background: #3f4652;
+	left: -16%;
+	top: 0;
+	transition:all 0.8s;
+}
+#changeIndex{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+}
+#upperUI{
+	position: absolute;
+	width: auto;
+	height: 30px;
+	right: 100px;
+	cursor: pointer;
+}
+#upperUI p{
+	font-family: "Microsoft Yahei";
+	color:white;
+}
+#upperUI:hover .upArrow{
+	color: #607B8B;
+}
+#lowerUI{
+	position: absolute;
+	width: auto;
+	height: 30px;
+	right: 40px;
+	cursor: pointer;
+}
+#lowerUI:hover .downArrow{
+	color: #607B8B;
+}
+#lowerUI p{
+	font-family: "Microsoft Yahei";
+	color: white;
+}
+#toolSpans{
+	left: 0px;
+	margin-top: 80px;
+	width:100%;
+	height: 300px;
+	overflow: auto;
+	overflow-x:hidden;
+
+}
+.toolSpan{
+	position: relative;
+	float: left;
+	left: 0;
+	width: 100%;
+	height: auto;
+	color: white;
+	text-align: center;
+	font-family: 'Microsoft Yahei';
+	font-size: 16px;
+	background: #363d47;
+	line-height: 3;
+}
+#addSpan{
+	width: 100%;
+	height: 50px;
+	color: white;
+	text-align: center;
+	font-family: 'Microsoft Yahei';
+	font-size: 16px;
+	line-height: 3;
+	cursor: pointer;
+}
+.iconClose{
+	position: absolute;
+	right: 8px;
+	color: grey;
+}
+#returnNav{
+	position: absolute;
+	top: 8px;
+	left: 24px;
+	color: white;
+	font-family: 'Microsoft Yahei';
+	font-size: 18px;
+	cursor: pointer;
+	transition:all 0.5s;
+}
+#returnNav:hover{
+	left: 20px;
+}
+#page{
+	position: absolute;
+	width: 84%;
+	height: 100%;
+	left: 16%;
+	top: 0;
+	background: white;
+}
+.active{
+	border: 2px solid red;
+}
+.UIApi{
+	position: relative;
+	top: 50px;
+	margin-left: 12px;
+	margin-top: 10px;
+	padding-top: 8px;
+	float: left;
+	width: 50px;
+	height: 70px;
+	z-index: 3;
+	cursor: pointer;
+	text-align: center;
+	font-family: 'Microsoft Yahei';
+	padding: 5px 5px;
+	border-radius: 5px;
+	background-color: #363d47;
+	color: white;
+}
+.UIApi p{
+	font-size: 12px;
+}
+.UIApi i{
+	font-size: 20px;
+}
+.UIApi:hover i{
+	color: #607B8B;
+}
+#saveLay{
+	position:absolute;
+	height: 50px;
+	width: 40px;
+	top: 0;
+}
+#bgEdit{
+	cursor: pointer;
+}
+.divActive{
+	border: 1px solid blue;
+}
+#imageShow{
+	position: fixed;
+	left: 360px;
+	top: 80px;
+	background: #3f4652;
+	width: 700px;
+	height: 420px;
+	display: none;
+}
+#imageShowClose{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	color: white;
+}
+#imageShowClose i{
+	font-size: 25px;
+}
+#saveLay a{
+	width: 100px;
+	height: 40px;
+}
+#saveLay i{
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	font-size: 20px;
+	color: white;
+}
+#saveLay p{
+	position: absolute;
+	font-family: "Microsoft Yahei";
+	top: 10px;
+	left: 35px;
+}
+#mask{
+	background: black;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+img{
+	position: relative;
+
+	width: 140px;
+	height: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.imgDiv{
+	position: relative;
+	float: left;
+	width: 140px;
+	height: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.imgDivHover{
+	position: absolute;
+	width: 100%;
+	height: 26px;
+	background: black;
+	opacity: 0.5;
+	left: 10px;
+	top: 10px;
+	display: none;
+}
+#imageShowTitle{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	font-family: 'Microsoft Yahei';
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	line-height: -36px;
+}
+#imageShowContent{
+	position: absolute;
+	left: 40px;
+	top: 50px;
+	height: 300px;
+	width: 630px;
+	overflow: scroll;
+	overflow-x:hidden;
+	background-color: white;
+}
+#imageShowFooter{
+	position: absolute;
+	left: 0;
+	top: 360px;
+}
+#fileInput{
+	position: absolute;
+	left: 80px;
+	top: 2px;
+	width: 320px;
+	height: 30px;
+	border: 1px solid white;
+	color: black;
+	font-family: 'Microsoft Yahei';
+	padding-left: 10px;
+	cursor: pointer;
+	padding-top: 3px;
+	background: white;
+}
+#imageShowFooter input{
+	opacity: 0;
+	cursor: pointer;
+}
+#file1{
+	position: absolute;
+	left: 80px;
+	top: 2px;
+	width: 300px;
+	height: 30px;
+}
+#upload{
+	position: absolute;
+	left: 334px;
+	top: 4px;
+	width: 60px;
+	height: 26px;
+	background-color: #3f4652;
+	color: white;
+	font-family: 'Microsoft Yahei';
+}
+#deside{
+	position: absolute;
+	left: 500px;
+	top: 2px;
+	width: 100px;
+	height: 30px;
+	font-family: 'Microsoft Yahei';
+}
+.chartadd{
+	cursor: pointer;
+}
+.ui-Resizable-t{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+	height: 10px;
+	cursor: crosshair;
+}
+.ui-Resizable-r{
+	position: absolute;
+	right: 0px;
+	top:0px;
+	width: 10px;
+	height: 100%;
+/*		background-color: green;*/
+	cursor: e-resize;
+}
+.ui-Resizable-b{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+	width: 100%;
+	height: 10px;
+/*		background-color: green;*/
+	cursor: n-resize;
+}
+.ui-Resizable-rb{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+	width: 20px;
+	height: 20px;
+/*		background-color: blue;*/
+	cursor: nw-resize;
+}
+@font-face {font-family: 'iconfont';
+    src: url('/iconFont/iconfont.eot'); /* IE9*/
+    src: url('/iconFont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/iconFont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('/iconFont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/iconFont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    color: white;
+}
+.iconfont:hover{
+	color: #607B8B;
+}
+.icon-chahao:before { content: "\e63b"; }
+.icon-shanchu:before { content: "\f000a"; }
+.icon-xiangshang:before { content: "\e63e"; }
+.icon-xiangxia:before { content: "\e63f"; }
+.icon-juxingroiceliang:before { content: "\e64c"; }
+.icon-nav:before { content: "\e656"; }
+.icon-huandengpian:before { content: "\e603"; }
+.icon-anniu:before { content: "\e605"; }
+.icon-fangdajing:before { content: "\e65c"; }
+.icon-bingzhuang:before { content: "\e639"; }
+.icon-tubiaozhuzhuangtu:before { content: "\f0074"; }
+.icon-iocnyuanhuantu:before { content: "\e615"; }
+.icon-wenben:before { content: "\e6c7"; }
+.icon-icon31:before { content: "\e69c"; }
+.icon-duihao:before { content: "\e62f"; }
+.icon-baocun:before { content: "\e602"; }
+.icon-lingcunwei:before { content: "\e6b5"; }
+.icon-jiantouzuo:before { content: "\e654"; }
+.icon-plus:before { content: "\e729"; }
+
+.upArrow{
+	font-size: 20px;
+}
+.downArrow{
+	font-size: 20px;
+}

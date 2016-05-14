@@ -1,0 +1,13 @@
+.lakeColorBg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background:-webkit-gradient(linear, 0% 0%, 100% 100%,from(#6495ED), to(#BA55D3));
+	background: gradient(linear, 0% 0%, 100% 100%,from(#6495ED), to(#BA55D3));
+}
+.lakeLineAnim{
+	position: absolute;
+	left: 0;
+	top: 0;
+}

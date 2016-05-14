@@ -1,0 +1,32 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		link(href="/index/css/manageLayout.css" type="text/css" rel="stylesheet")
+		link(href="/libs/bootstrap/dist/css/bootstrap.min.css",rel="stylesheet")
+
+		script(src="/libs/jquery/dist/jquery.min.js")
+		script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
+		script(src="/index/js/manageLayout.js")
+	body
+		p #{title}
+		each group in groups
+			div(id="#{group.id}") 
+				p 工作组名：#{group.name}
+				p 描述：#{group.uniqueSign}
+				span(class="queryGroupers") 显示成员
+				span(class="saveGrouper") 邀请成员
+				div(class="displayGroupers")
+				p(class="deleteGroup")
+					a 删除
+		div(id="mask")
+		div(id="photo")
+			img.img-circle(id="sculpture",width="200px",height="200px")
+			p(id="name")
+		div(id="popo")
+			p(id="title") 请输入对方用户名
+			div(id="popobody")
+				p 用户名:
+				input(type="text",id="userName")
+			button(id="confirm") 邀请

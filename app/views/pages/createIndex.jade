@@ -1,0 +1,88 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		link(href="/index/css/createIndex.css",type="text/css",rel="stylesheet")
+		link(href="/libs/bootstrap/dist/css/bootstrap.min.css",rel="stylesheet")
+		link(href="/lake.css",type="text/css",rel="stylesheet")
+		script(src="/lake-1.0.js")
+		script(src="/libs/jquery/dist/jquery.min.js")
+		script(src="/index/js/html2canvas.js")
+		script(src="/index/js/createIndex.js")
+		script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
+	body
+		div#tool
+			div#addDiv.UIApi 
+				i.iconfont &#xe64c;
+				p 容器
+			div#addNav.UIApi
+				i.iconfont &#xe656;
+				p 导航条
+			div#addSlideView.UIApi
+				i.iconfont &#xe603;
+				p 幻灯片
+			div#addButton.UIApi
+				i.iconfont &#xe605;
+				p 按钮
+			div#addScaleLarge.UIApi
+				i.iconfont &#xe65c;
+				p 放大镜
+			div#addPie.UIApi
+				i.iconfont &#xe639;
+				p 饼状图
+			div#addRing.UIApi
+				i.iconfont &#xe615;
+				p 环状图
+			div#addHistogram.UIApi
+				i.iconfont &#xf0074;
+				p 柱状图
+			div#saveLay
+				a.btn.btn-primary(data-toggle="modal",data-target="#saveL") 
+					i.iconfont &#xe6b5;
+					p 另存为
+			a.btn.btn-primary(id="save",data-id="#{id}",data-image="#{image}")
+				i.iconfont &#xe602;
+				p 保存
+		div#data
+			p #{divs}
+		div#page
+		#saveL.modal.fade(role="dialog",aria-labelledby="myModalLabel")
+			.modal-dialog
+				.modal-content
+						.modal-header 布局名称	
+						.modal-body
+							.form-group
+								label(for="signupName") 名称
+								input#layoutName.form-control(type="text")
+						.modal-footer
+							button.btn.btn-default(type="button",data-dismiss="modal") 关闭
+							button.btn.btn-success#saveLayout(type="submit",data-dismiss="modal") 提交
+		div#navTool
+			div#returnNav
+				i.iconfont &#xe654;返回
+			div#toolContent
+			div#changeIndex
+				div#upperUI 
+					i.iconfont.upArrow &#xe63e;
+					p 上移一层
+				div#lowerUI 
+					i.iconfont.downArrow &#xe63f;
+					p 下移一层
+		#mask
+		#imageShow
+			#imageShowTitle 我上传的图片
+			#imageShowClose
+				i.iconfont &#xe63b;
+			#imageShowContent
+			#imageShowFooter
+				div#fileInput 点击这里上传图片
+				input(type='file',id='file1',name='file1')
+				button(id='upload',name='upload') 上传
+				button(id='deside') 确定
+		#saveLayoutSuccess
+			i.iconfont &#xe62f;
+			p 另存为成功！
+		#updateLayoutSuccess
+			i.iconfont &#xe62f;
+			p 保存成功！

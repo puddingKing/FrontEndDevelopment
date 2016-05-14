@@ -1,0 +1,16 @@
+.lakeColorButton{	
+	border-radius: 10px;
+	text-align: center;
+	position: absolute;
+}
+.colorButtonClass{
+	background-color: #EE3B3B;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Microsoft Yahei';
+}
+.colorButtonClass:hover{
+	background-color: #3B3B3B;
+}
+

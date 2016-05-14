@@ -1,0 +1,7 @@
+.lakeChartRing .lakeChartPie .lakeChartHistogram .lakeChartSin{
+	width: auto;
+	height: auto;
+	z-index: 10;
+}
+
+

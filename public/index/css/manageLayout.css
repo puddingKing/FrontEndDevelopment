@@ -1,0 +1,81 @@
+.deleteGroup{
+	cursor:pointer;
+}
+.queryGroupers{
+	cursor: pointer;
+	text-decoration: none;
+	color: blue;
+}
+.saveGrouper{
+	cursor: pointer;
+	text-decoration: none;
+	color: blue;
+}
+#popo{
+	position: fixed;
+	left: 35%;
+	top: 25%;
+	width: 30%;
+	height: 34%;
+	background-color: white;
+}
+#mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+#confirm{
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+	width: 80%;
+	height: 20%;
+/*	background-color: blue;
+	color: white;*/
+}
+#popo p{
+	position: absolute;
+	float: left;
+	left: 10%;
+	font-family: "Microsoft Yahei";
+	font-size: 16px;
+}
+#userName{
+	position: absolute;
+	float: left;
+	left: 25%;
+	top: 20%;
+	width: 63%;
+}
+#popobody{
+	position: relative;
+	width: 100%;
+	margin-left: 0;
+	margin-top: 20%;
+}
+#title{
+	position: relative;
+	width: 100%;
+	height: 10px;
+	padding-top: 5%;
+	margin-top: 0;
+	margin-left: 0;
+	font-family: "Microsoft Yahei";
+	font-size: 11px;
+	color: grey;
+}
+#photo{
+	position: fixed;
+	left: 16%; 
+	top: 25%;
+	color: white;
+}
+#name{
+	position: relative;
+	margin-top: 10px;
+}

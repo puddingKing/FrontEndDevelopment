@@ -1,0 +1,34 @@
+.lakeSideBar{
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	height: 100%;
+	background-color: #3f4652; 
+	
+}
+.lakeSideBarItem{
+	position: relative;
+	float: left;
+	width: 220px;
+	height: 40px;
+	padding-left: 30px;
+	color: white;
+	line-height: 40px;
+	font-family:'Microsoft YaHei';
+	font-size: 16px;
+	opacity: 0.9;
+	cursor: pointer;
+	z-index: 6;
+}
+.lakeSideBarItem:first-child{
+	position: relative;
+	margin-top: 112.5px;
+}
+.lakeCanvasActive{
+	position: absolute;
+	top: 112.5px;
+	left: 0;
+	transition:all 0.5s;
+	z-index: 5;
+}

@@ -1,0 +1,134 @@
+.desk{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	font-family: 'Microsoft Yahei';
+	font-size: 18px;
+	color: white;
+}
+.deskUserName{
+	position: absolute;
+	left: 280px;
+	top: 70px;
+}
+.deskUserOld{
+	position: absolute;
+	left: 200px;
+	top: 200px;
+}
+.deskUserOldSet{
+	position: absolute;
+	left: 200px;
+	top: 195px;
+}
+.deskUserEmail{
+	position: absolute;
+	left: 800px;
+	top: 60px;
+}
+.deskUserEmailSet{
+	position: absolute;
+	left: 800px;
+	top: 55px;
+}
+.deskUserTime{
+	position: absolute;
+	left: 970px;
+	top: 410px;
+}
+#pic{
+	position: absolute;
+	left: 568px;
+	top: 200px;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	transition:all 1s;
+	transform:rotate(0deg);
+}
+.deskUserNickName{
+	position: absolute;
+	left: 200px;
+	top: 400px;
+}
+.deskUserNickNameSet{
+	position: absolute;
+	left: 200px;
+	top: 395px;
+}
+
+.deskUserUnique{
+	position: absolute;
+	left: 970px;
+	top: 240px;
+}
+.deskUserUniqueSet{
+	position: absolute;
+	left: 970px;
+	top: 235px;
+}
+#mask{
+	position: absolute;
+	left: 568px;
+	top: 200px;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	background-color: black;
+	opacity: 0.5;
+	border-radius: 50%;
+	vertical-align: middle;
+	z-index: 1;
+}
+
+#set{
+	position: absolute;
+	text-decoration: none;
+	color: white;
+	top: 260px;
+	left: 628px;
+	font-size: 20px;
+	z-index: 2;
+}
+#setPhoto{
+	position: absolute;
+	text-decoration: none;
+	color: white;
+	top: 305px;
+	left: 632px;
+	z-index: 2;
+}
+input{
+	background-color: transparent;
+	padding:3px 5px;
+}
+textarea{
+	background-color: transparent;
+	padding: 3px 5px;
+}
+form{
+	width: 100%;
+	height: 100%;
+}
+.deskUserSave{
+	position: absolute;
+	
+	left: 568px;
+	top: 500px;
+}
+.deskUserSave button{
+	width: 200px;
+	height: 40px;
+	background-color: transparent;
+	font-size:20px;
+}
+.deskUserSave button:hover{
+	background-color: white;
+	color: black;
+	opacity: 0.6;
+	border: 0;
+}
+
+

@@ -1,0 +1,46 @@
+extends ../layout
+
+block content	
+	div.mainBox
+		div#createLayout.createLayout
+			div#createLayoutTit
+				div.lakeColorBg
+				div.topmask
+				div.lakeLineAnim(data-width="0.82",data-height="100")
+				a(href="/createLayout",id="createLayoutA") Create a layout
+					i.iconfont &#xf0089;
+		div#shareLayout.shareLayout
+			//- div#share 分享
+			canvas(id="share",width="1000px",height="600px")
+		div#yourLayout.yourLayout
+			p your layout
+	div.lakeSideBar(data-width="0.18")
+		span.lakeSideBarItem(id="createALayout") 创建一个布局
+		span.lakeSideBarItem(id="shareALayout") 分享
+		span.lakeSideBarItem(id="yourDesigns") 我的作品
+	div.userCenter
+		a.btn.btn-primary.btn-lg.active.btn-block(href="/userCenter" role="button" id="userCenter") 个人中心
+	.userStateBox
+		if user
+			.userState
+				img.img-circle(src='#{user.sculpture}',width="56px",height="56px")
+			p #{user.nickName}
+			a.userStateLog(href="/logout") 注销
+		else
+			a.navbar-link(href="#",data-toggle="modal",data-target="#signupModal") 注册
+			span &nbsp;|&nbsp;
+			a.navbar-link(href="#",data-toggle="modal",data-target="#signinModal") 登录
+	#mask
+	#groupBox
+		.boxTitle
+			p 新建工作组
+		.boxContent
+			.boxContentColm
+				p 工作组名
+				input(id="groupName",type="text")
+			.boxContentColm
+				p 描述
+				textarea(id="groupSign",type="text")
+		.boxFooter
+			button(id="createGroup") 创建
+	script(src="/index/index.js")
